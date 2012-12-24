@@ -21,10 +21,5 @@
     "autoload": {
         "psr-0": { "Thiktak\\CoreBundle": "" }
     },
-    "target-dir": "Thiktak/CoreBundle",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.0.x-dev"
-        }
-    }
+    "target-dir": "Thiktak/CoreBundle"
 }
