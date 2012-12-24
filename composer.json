@@ -19,7 +19,9 @@
         "symfony/framework-bundle": ">=2.1,<2.3-dev"
     },
     "autoload": {
-        "psr-0": { "Thiktak\\CoreBundle": "" }
+        "psr-0": {
+            "Thiktak\\CoreBundle": "/"
+        }
     },
     "target-dir": "Thiktak/CoreBundle"
 }
