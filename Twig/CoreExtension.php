@@ -47,15 +47,15 @@ class CoreExtension extends \Twig_Extension
        return ($sign ? 'Il y a' : 'Dans ') . ' ' . str_replace('ss', 's', $x);
     }
 
-    public function printDate($DateTime = null, $short = true, $format = null)
+    public function printDate($DateTime = null, $format = null)
     {
         if( !($DateTime instanceof \DateTime) )
             $DateTime = new \DateTime($DateTime);
         
-        $return = $DateTime->format($format ?: 'd/m/Y h\hi');
+        $format = $format == 1 ? 'd/m/Y' : $format;
+        $format = empty($format) ? 'd/m/Y H:i' : $format;
 
-        if( $short )
-            $return = preg_replace('`(:00){1,}$`', null, $return);
+        $return = $DateTime->format($format ?: 'd/m/Y h\hi');
 
         return $return;
     }
